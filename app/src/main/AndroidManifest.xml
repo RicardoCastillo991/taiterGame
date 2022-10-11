@@ -14,7 +14,16 @@
         android:theme="@style/Theme.TaiterGame"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".CuatroJugadoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DosJugadoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormularioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

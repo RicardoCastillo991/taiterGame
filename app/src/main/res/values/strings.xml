@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">taiterGame</string>
+    <string name="tittle_inicio">Titulo de la aplicacion</string>
+    <string name="button_inicio">Comenzar con el juego</string>
+    <string name="fontTittle">sans-serif-light</string>
+    <string name="formularioTittle">Cantidad de jugadores</string>
+    <string name="dosJugadores">2 Jugadores</string>
+    <string name="tresJugadores">3 Jugadores</string>
+    <string name="cuatroJugadores">4 Jugadores</string>
+
+
 </resources>
