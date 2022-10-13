@@ -45,13 +45,13 @@ public class CuatroJugadoresActivity extends AppCompatActivity {
 
         if(numeroJugadores == 3){
             txtJugadorCuatro.setVisibility(View.INVISIBLE);
-            colorJugadorCuatro.setBackgroundColor(Color.parseColor("#ffffff"));
+            colorJugadorCuatro.setVisibility(View.INVISIBLE);
         }
         if(numeroJugadores == 2){
             txtJugadorCuatro.setVisibility(View.INVISIBLE);
-            colorJugadorCuatro.setBackgroundColor(Color.parseColor("#ffffff"));
+            colorJugadorCuatro.setVisibility(View.INVISIBLE);
             txtJugadorTres.setVisibility(View.INVISIBLE);
-            colorJugadorTres.setBackgroundColor(Color.parseColor("#ffffff"));
+            colorJugadorTres.setVisibility(View.INVISIBLE);
         }
 
         //Adaptacion del limites del tiempo para la seekbar(el juego no puede durar menos de 30 segundos).
