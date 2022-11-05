@@ -49,8 +49,6 @@ public class JuegoActivity extends AppCompatActivity {
         ObJugadorUno.setNombre(jugadorUno);
         Jugador ObJugadorDos = new Jugador();
         ObJugadorDos.setNombre(jugadorDos);
-        ObJugadorDos.setOxigeno(11);
-        ObJugadorDos.setBasura(2);
         Jugador ObJugadorTres = new Jugador();
         ObJugadorTres.setNombre(jugadorTres);
         Jugador ObJugadorCuatro = new Jugador();
@@ -81,7 +79,6 @@ public class JuegoActivity extends AppCompatActivity {
         tvJugadorTres.setText(jugadorTres);
         tvJugadorCuatro.setText(jugadorCuatro);
 
-        final int[] turno = {0,1,2,3,4};
         btnJugadorUno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -172,7 +169,7 @@ public class JuegoActivity extends AppCompatActivity {
                     }
                     tvBasuras.setText("Basuras "+ObJugadorUno.getBasura());
                 }
-                if(juego.getTurno() == 1) {
+                if(juego.getTurno() == 2) {
                     if(ObJugadorDos.getBasura() < 3){
                         ObJugadorDos.setBasura(ObJugadorDos.getBasura()+1);
                     }
@@ -181,7 +178,7 @@ public class JuegoActivity extends AppCompatActivity {
                     }
                     tvBasuras.setText("Basuras "+ObJugadorDos.getBasura());
                 }
-                if(juego.getTurno() == 1) {
+                if(juego.getTurno() == 3) {
                     if(ObJugadorTres.getBasura() < 3){
                         ObJugadorTres.setBasura(ObJugadorTres.getBasura()+1);
                     }
@@ -190,7 +187,7 @@ public class JuegoActivity extends AppCompatActivity {
                     }
                     tvBasuras.setText("Basuras "+ObJugadorTres.getBasura());
                 }
-                if(juego.getTurno() == 1) {
+                if(juego.getTurno() == 4) {
                     if(ObJugadorCuatro.getBasura() < 3){
                         ObJugadorCuatro.setBasura(ObJugadorCuatro.getBasura()+1);
                     }
