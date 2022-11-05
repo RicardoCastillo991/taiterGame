@@ -4,41 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".CuatroJugadoresActivity">
 
     <Button
         android:id="@+id/btnComenzarPartida"
         android:layout_width="245dp"
         android:layout_height="59dp"
-        android:layout_marginEnd="56dp"
         android:text="Comenzar Partida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.804"
-        app:layout_constraintStart_toEndOf="@+id/seekBarTiempo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/colorJugador4"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="#F1E048"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintVertical_bias="0.781" />
 
     <EditText
         android:id="@+id/txtJugadorCuatro"
         android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="84dp"
         android:layout_marginBottom="160dp"
         android:ems="10"
         android:hint="Jugador 4"
@@ -46,41 +30,23 @@
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/colorJugador4"
         app:layout_constraintTop_toBottomOf="@+id/txtJugadorDos"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.945" />
 
     <EditText
         android:id="@+id/txtJugadorTres"
         android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="144dp"
         android:layout_marginBottom="160dp"
         android:ems="10"
         android:hint="Jugador 3"
         android:inputType="textPersonName"
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/colorJugador4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/colorJugador3"
-        app:layout_constraintTop_toBottomOf="@+id/txtJugadorUno"
-        app:layout_constraintVertical_bias="0.941" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/colorJugador3"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txtJugadorUno"
+        app:layout_constraintVertical_bias="0.945" />
 
     <TextView
         android:id="@+id/textView7"
@@ -89,6 +55,7 @@
         android:fontFamily="@string/fontTittle"
         android:text="Ingresa el nombre de los jugadores"
         android:textSize="20dp"
+        android:textColor="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -96,102 +63,79 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.088" />
 
-    <SeekBar
-        android:id="@+id/seekBarTiempo2"
-        android:layout_width="191dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTiempo"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/txtTiempo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="segundos: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/colorJugador1"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@color/teal_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="Indica el tiempo para cada jugador"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/colorJugador2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginEnd="264dp"
-        android:background="#FFE40808"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/txtJugadorUno"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <EditText
         android:id="@+id/txtJugadorUno"
         android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginStart="10dp"
         android:ems="10"
         android:hint="Jugador 1"
         android:inputType="textPersonName"
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/colorJugador1"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.223" />
 
     <EditText
         android:id="@+id/txtJugadorDos"
         android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="84dp"
         android:ems="10"
         android:hint="Jugador 2"
         android:inputType="textPersonName"
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toEndOf="@+id/colorJugador2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.223" />
+
+    <ImageView
+        android:id="@+id/imgJugadorUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223"
+        app:srcCompat="@drawable/buzo_amarillo" />
+
+    <ImageView
+        android:id="@+id/imgJugadorDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtJugadorDos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223"
+        app:srcCompat="@drawable/buzo_azul" />
+
+    <ImageView
+        android:id="@+id/imgJugadorTres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtJugadorTres"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548"
+        app:srcCompat="@drawable/buzo_rosado" />
+
+    <ImageView
+        android:id="@+id/imgJugadorCuatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtJugadorCuatro"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548"
+        app:srcCompat="@drawable/buzo_verde" />
 </androidx.constraintlayout.widget.ConstraintLayout>

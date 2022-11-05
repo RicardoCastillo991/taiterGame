@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">taiterGame</string>
+    <string name="app_name">Sumergidos</string>
     <string name="tittle_inicio">Titulo de la aplicacion</string>
     <string name="button_inicio">Comenzar con el juego</string>
     <string name="fontTittle">sans-serif-light</string>

@@ -5,38 +5,39 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class CuatroJugadoresActivity extends AppCompatActivity {
     private Button btnComenzar;
     private Bundle bundle;
+    private ImageView imgJugadorUno, imgJugadorDos, imgJugadorTres, imgJugadorCuatro;
     private EditText txtJugadorUno,txtJugadorDos, txtJugadorCuatro, txtJugadorTres;
-    private ConstraintLayout colorJugadorCuatro, colorJugadorTres;
-    private TextView txtTiempo;
-    private SeekBar seekBarTiempo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuatro_jugadores);
         txtJugadorUno = (EditText)findViewById(R.id.txtJugadorUno);
         txtJugadorDos = (EditText)findViewById(R.id.txtJugadorDos);
+        btnComenzar = (Button)findViewById(R.id.btnComenzarPartida);
 
-        btnComenzar = (Button) findViewById(R.id.btnComenzarPartida);
+        imgJugadorUno = findViewById(R.id.imgJugadorUno);
+        imgJugadorDos = findViewById(R.id.imgJugadorDos);
+        imgJugadorTres = findViewById(R.id.imgJugadorTres);
+        imgJugadorCuatro = findViewById(R.id.imgJugadorCuatro);
+
 
         //Estos objetos son para el uso de solo un activity para dos condiciones.
         txtJugadorCuatro = (EditText)findViewById(R.id.txtJugadorCuatro);
-        colorJugadorCuatro = (ConstraintLayout)findViewById(R.id.colorJugador4);
-
         txtJugadorTres = (EditText)findViewById(R.id.txtJugadorTres);
-        colorJugadorTres = (ConstraintLayout)findViewById(R.id.colorJugador3);
         //El seekbar y tv son para la medicion y utilizacion del tiempo para cada jugador.
-        txtTiempo = (TextView)findViewById(R.id.txtTiempo);
-        seekBarTiempo = (SeekBar)findViewById(R.id.seekBarTiempo2);
         //el bundle toma los datos de los botones de formulario para saber cuantos jugadores son.
         bundle = getIntent().getExtras();
         String jugadores = bundle.getString("Jugadores");
@@ -45,47 +46,27 @@ public class CuatroJugadoresActivity extends AppCompatActivity {
 
         if(numeroJugadores == 3){
             txtJugadorCuatro.setVisibility(View.INVISIBLE);
-            colorJugadorCuatro.setVisibility(View.INVISIBLE);
+            imgJugadorCuatro.setVisibility(View.INVISIBLE);
         }
         if(numeroJugadores == 2){
             txtJugadorCuatro.setVisibility(View.INVISIBLE);
-            colorJugadorCuatro.setVisibility(View.INVISIBLE);
+            imgJugadorCuatro.setVisibility(View.INVISIBLE);
             txtJugadorTres.setVisibility(View.INVISIBLE);
-            colorJugadorTres.setVisibility(View.INVISIBLE);
+            imgJugadorTres.setVisibility(View.INVISIBLE);
         }
 
         //Adaptacion del limites del tiempo para la seekbar(el juego no puede durar menos de 30 segundos).
-        seekBarTiempo.setMax(330);
-        seekBarTiempo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                int valor = i + 30;
-                txtTiempo.setText((String.valueOf(valor)));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
 
         btnComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String numeroJugadoresString = jugadores;
-                String tiempo = txtTiempo.getText().toString();
                 String jugadorUno = txtJugadorUno.getText().toString();
                 String jugadorDos = txtJugadorDos.getText().toString();
                 String jugadorTres = txtJugadorTres.getText().toString();
                 String jugadorCuatro = txtJugadorCuatro.getText().toString();
 
                 Intent intent = new Intent(CuatroJugadoresActivity.this, JuegoActivity.class);
-                intent.putExtra("tiempo", tiempo);
                 intent.putExtra("Jugadores", numeroJugadoresString);
                 if(numeroJugadores == 2){
                     intent.putExtra("jugadorUno", jugadorUno);
